@@ -1,0 +1,49 @@
+[gd_scene load_steps=14 format=3 uid="uid://jf3gcc6nd2qh"]
+
+[ext_resource type="Script" path="res://Scenes/Enemy/Enemy_action_picker.gd" id="1_gcevx"]
+[ext_resource type="Script" path="res://Enemies/Ghost/Ghost_attack_action.gd" id="2_4l5ra"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://Assets/art/tile_0103.png" id="3_it83y"]
+[ext_resource type="Script" path="res://Enemies/Ghost/Ghost_block_action.gd" id="3_rfry6"]
+[ext_resource type="Script" path="res://Enemies/Ghost/Ghost_mega_block_action.gd" id="4_cq8md"]
+[ext_resource type="Script" path="res://Custom_resources/Intent.gd" id="4_wsbp6"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://Assets/art/enemy_attack.ogg" id="5_02kql"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://Assets/art/tile_0101.png" id="6_avgt0"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://Assets/art/enemy_block.ogg" id="8_33eqm"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://Assets/art/tile_0102.png" id="8_78qcb"]
+
+[sub_resource type="Resource" id="Resource_epb74"]
+script = ExtResource("4_wsbp6")
+number = "7"
+icon = ExtResource("3_it83y")
+
+[sub_resource type="Resource" id="Resource_46n1q"]
+script = ExtResource("4_wsbp6")
+number = ""
+icon = ExtResource("6_avgt0")
+
+[sub_resource type="Resource" id="Resource_iothy"]
+script = ExtResource("4_wsbp6")
+number = ""
+icon = ExtResource("8_78qcb")
+
+[node name="GhostEnemyAI" type="Node"]
+script = ExtResource("1_gcevx")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("2_4l5ra")
+intent = SubResource("Resource_epb74")
+sound = ExtResource("5_02kql")
+type = 1
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("3_rfry6")
+intent = SubResource("Resource_46n1q")
+sound = ExtResource("8_33eqm")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("4_cq8md")
+intent = SubResource("Resource_iothy")
+sound = ExtResource("8_33eqm")

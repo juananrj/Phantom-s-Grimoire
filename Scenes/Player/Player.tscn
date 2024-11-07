@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cej6xasxaimaj"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_mlytr"]
+[ext_resource type="PackedScene" uid="uid://c2d77pug4xy2g" path="res://Scenes/UI/Stats_ui.tscn" id="2_2c0y0"]
+[ext_resource type="Resource" uid="uid://duber7wbuf2i2" path="res://Characters/Warrior/Warrior_stats.tres" id="2_mpych"]
+[ext_resource type="Texture2D" uid="uid://bxqs21q0daa5d" path="res://Assets/Characters/Warrior/knight.png" id="2_td2b6"]
+
+[node name="Player" type="Node2D" groups=["player"]]
+script = ExtResource("1_mlytr")
+stats = ExtResource("2_mpych")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_td2b6")
+
+[node name="StatsUI" parent="." instance=ExtResource("2_2c0y0")]
+offset_top = 16.0
+offset_bottom = 32.0

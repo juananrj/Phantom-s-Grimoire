@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://opa5ncdvflrf"]
+
+[ext_resource type="Texture2D" uid="uid://3uu1i8w54t3o" path="res://Assets/Enemies/Zombie.png" id="1_0eqdw"]
+[ext_resource type="Script" path="res://Custom_resources/Enemy_stats.gd" id="1_66lop"]
+[ext_resource type="PackedScene" uid="uid://croye087tkpru" path="res://Enemies/Zombie/Zombie_enemy_ai.tscn" id="1_o8y64"]
+
+[resource]
+script = ExtResource("1_66lop")
+ai = ExtResource("1_o8y64")
+max_health = 10
+art = ExtResource("1_0eqdw")

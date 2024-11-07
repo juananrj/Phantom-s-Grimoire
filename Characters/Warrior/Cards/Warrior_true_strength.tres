@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c62eool2kbmjv"]
+
+[ext_resource type="Texture2D" uid="uid://ctwp2gpwxsaco" path="res://Assets/Icons/Item_65.png" id="1_sjiwr"]
+[ext_resource type="Script" path="res://Characters/Warrior/Cards/Warrior_true_strength.gd" id="2_ks0a4"]
+[ext_resource type="AudioStream" uid="uid://b1vpjjmi5cj3n" path="res://Assets/art/axe.ogg" id="3_idv0g"]
+
+[resource]
+script = ExtResource("2_ks0a4")
+id = "Warrior_true_strength"
+type = 2
+rarity = 2
+target = null
+cost = 3
+icon = ExtResource("1_sjiwr")
+tooltip_text = "[center]At the start of your turn, gain 2 [color=\\\"ffdf00\\\"]Muscle[/color].[/center]"
+sound = ExtResource("3_idv0g")
